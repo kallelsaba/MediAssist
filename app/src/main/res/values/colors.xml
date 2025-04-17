@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!--welcome-->
+    <color name="primary_color">#016599</color>
+    <color name="on_primary_color">#FFFFFFFF</color>  <!-- Couleur du texte/icônes sur le fond primaire -->
+    <!--login-->
+    <color name="light_blue">#a6e1fa</color>
+    <color name="gray">#888888</color>
+    <color name="light_gray">#F0F0F0</color>
+    <color name="shadow_gray">#DDDDDD</color>
+    <color name="red">#FF0000</color>
+
+    <color name="green">#75d481</color>
+    <color name="primary_color_light">#58a1ce</color>
+</resources>

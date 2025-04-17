@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- En-tête de notification -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/primary_color"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_notification"
+            android:layout_gravity="center_vertical"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tvNotificationTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9:00AM"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Contenu de la notification -->
+    <TextView
+        android:id="@+id/tvNotificationTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You have to take your medication"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:background="@color/white"/>
+
+    <!-- Image du médicament -->
+    <ImageView
+        android:id="@+id/ivMedication"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerInside"
+        android:padding="16dp"
+        android:background="@color/white"/>
+
+    <!-- Nom du médicament -->
+    <TextView
+        android:id="@+id/tvMedicationName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OBH Combi"
+        android:textColor="@color/primary_color"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="@color/white"/>
+
+    <!-- Instructions -->
+    <TextView
+        android:id="@+id/tvInstructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eat something"
+        android:textColor="@color/primary_color"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@color/white"/>
+
+    <!-- Boutons d'action -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnComplete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Complete"
+            android:textColor="@color/white"
+            android:background="@color/primary_color"
+            android:layout_margin="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSkip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Skip"
+                android:textColor="@color/gray"
+                android:background="@color/primary_color_light"
+                android:layout_margin="8dp"/>
+
+            <Button
+                android:id="@+id/btnSnooze"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Snooze 10 min"
+                android:textColor="@color/gray"
+                android:background="@color/primary_color_light"
+                android:layout_margin="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

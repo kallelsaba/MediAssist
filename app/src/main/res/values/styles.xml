@@ -1,0 +1,36 @@
+<resources>
+    <!-- Thème principal -->
+    <style name="CustomTheme" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">#016599</item>
+        <item name="colorPrimaryContainer">#005080</item>
+        <item name="android:buttonStyle">@style/CustomButton</item>
+    </style>
+
+    <!-- Style personnalisé pour les boutons -->
+    <style name="CustomButton" parent="Widget.Material3.Button">
+        <item name="android:backgroundTint">#016599</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <!--<item name="android:cornerRadius">16dp</item>  Arrondi des coins -->
+        <item name="android:elevation">8dp</item>     <!-- Ombre pour effet 3D -->
+    </style>
+
+
+    <!-- Style pour le texte des jours de la semaine -->
+    <style name="CalendarWeekText">
+        <item name="android:textColor">@color/primary_color</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Style pour le texte des dates -->
+    <style name="CalendarDateText">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Thème pour le CalendarView -->
+    <style name="CalendarTheme">
+        <item name="colorAccent">@color/primary_color</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textColorSecondary">@android:color/darker_gray</item>
+    </style>
+</resources>
