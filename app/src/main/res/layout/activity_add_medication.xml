@@ -126,7 +126,7 @@
                         android:id="@+id/etDosage"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="1 pill"
+                        android:hint="1"
                         android:inputType="text"
                         android:padding="12dp"
                         android:background="@drawable/edit_text_background"
