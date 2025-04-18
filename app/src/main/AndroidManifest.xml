@@ -16,6 +16,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="29" />
     <uses-permission android:name="android.permission.CAMERA" />
 
+
+
     <!-- Permission pour les appels téléphoniques -->
     <uses-permission android:name="android.permission.CALL_PHONE" />
 

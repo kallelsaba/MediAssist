@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="medication_types">
-        <item>Comprimé</item>
+        <item>Tablet</item>
         <item>Capsule</item>
-        <item>Sirop</item>
+        <item>Syrup</item>
         <item>Injection</item>
-        <item>Crème</item>
-        <item>Autre</item>
+        <item>Cream</item>
+        <item>Other</item>
     </string-array>
 
     <string-array name="medication_frequencies">
-        <item>Une fois par jour</item>
-        <item>Deux fois par jour</item>
-        <item>Trois fois par jour</item>
-        <item>Quatre fois par jour</item>
-        <item>Toutes les 4 heures</item>
-        <item>Toutes les 6 heures</item>
-        <item>Toutes les 8 heures</item>
-        <item>Toutes les 12 heures</item>
-        <item>Au besoin</item>
+        <item>Once a day</item>
+        <item>Twice a day</item>
+        <item>Three times a day</item>
+        <item>Four times a day</item>
+        <item>Every 4 hours</item>
+        <item>Every 6 hours</item>
+        <item>Every 8 hours</item>
+        <item>Every 12 hours</item>
+        <item>As needed</item>
     </string-array>
 
     <string-array name="contact_relations">
-        <item>Médecin</item>
-        <item>Famille</item>
-        <item>Ami</item>
-        <item>Urgence</item>
-        <item>Pharmacie</item>
-        <item>Autre</item>
+        <item>Doctor</item>
+        <item>Family</item>
+        <item>Friend</item>
+        <item>Emergency</item>
+        <item>Pharmacy</item>
+        <item>Other</item>
     </string-array>
 </resources>

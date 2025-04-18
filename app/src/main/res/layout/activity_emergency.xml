@@ -47,7 +47,7 @@
             android:layout_marginHorizontal="16dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/edit_text_background"
-            android:hint="Rechercher un contact"
+            android:hint="Search contact here ..."
             android:padding="12dp"
             android:drawableStart="@drawable/ic_search"
             android:drawablePadding="8dp"
