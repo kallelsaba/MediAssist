@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
 
     <!-- En-tête de notification -->
     <LinearLayout
@@ -41,6 +42,7 @@
         android:textColor="@color/black"
         android:textSize="16sp"
         android:padding="16dp"
+        android:layout_marginTop="25dp"
         android:background="@color/white"/>
 
     <!-- Image du médicament -->
@@ -57,7 +59,7 @@
         android:id="@+id/tvMedicationName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="OBH Combi"
+        android:text="Medication name"
         android:textColor="@color/primary_color"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -70,7 +72,7 @@
         android:id="@+id/tvInstructions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Eat something"
+        android:text="Take your medication now"
         android:textColor="@color/primary_color"
         android:textSize="16sp"
         android:gravity="center"
@@ -89,7 +91,7 @@
             android:layout_height="wrap_content"
             android:text="Complete"
             android:textColor="@color/white"
-            android:background="@color/primary_color"
+            android:background="@drawable/button_background"
             android:layout_margin="8dp"/>
 
         <LinearLayout
@@ -103,8 +105,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Skip"
-                android:textColor="@color/gray"
-                android:background="@color/primary_color_light"
+                android:textColor="@color/white"
+                android:background="@drawable/button_background"
                 android:layout_margin="8dp"/>
 
             <Button
@@ -113,8 +115,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Snooze 10 min"
-                android:textColor="@color/gray"
-                android:background="@color/primary_color_light"
+                android:textColor="@color/white"
+                android:background="@drawable/button_background"
                 android:layout_margin="8dp"/>
         </LinearLayout>
     </LinearLayout>
