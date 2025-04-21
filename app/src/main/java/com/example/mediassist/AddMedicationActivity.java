@@ -2,7 +2,10 @@ package com.example.mediassist;
 
 import static android.content.ContentValues.TAG;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -258,10 +261,52 @@ public class AddMedicationActivity extends AppCompatActivity {
 
         if (medicationId != -1) {
             Toast.makeText(this, "Medication added successfully", Toast.LENGTH_SHORT).show();
+
+            // 🎯 Planifier une notification
+            Calendar calendar = Calendar.getInstance();
+            try {
+                SimpleDateFormat format = new SimpleDateFormat("h:mm a", Locale.getDefault());
+                Date date = format.parse(time);
+                if (date != null) {
+                    Calendar now = Calendar.getInstance();
+                    calendar.setTime(date);
+                    calendar.set(Calendar.DAY_OF_MONTH, now.get(Calendar.DAY_OF_MONTH));
+                    calendar.set(Calendar.MONTH, now.get(Calendar.MONTH));
+                    calendar.set(Calendar.YEAR, now.get(Calendar.YEAR));
+
+                    if (calendar.before(now)) {
+                        calendar.add(Calendar.DAY_OF_MONTH, 1); // Pour demain si l'heure est déjà passée
+                    }
+
+                    Intent intent = new Intent(this, NotificationReceiver.class);
+                    intent.putExtra("title", name);
+                    intent.putExtra("note", "Prenez votre médicament maintenant");
+                    intent.putExtra("time", time);
+                    intent.putExtra("type", "medication");
+                    intent.putExtra("id", (int) medicationId); // ID unique basé sur la DB
+
+                    PendingIntent pendingIntent = PendingIntent.getBroadcast(
+                            this,
+                            (int) medicationId,
+                            intent,
+                            PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
+                    );
+
+                    AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+                    if (alarmManager != null) {
+                        alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+                        Log.d(TAG, "Notification planned at: " + calendar.getTime());
+                    }
+                }
+            } catch (Exception e) {
+                Log.e(TAG, "Error parsing time for notification", e);
+            }
+
             setResult(RESULT_OK);
             finish();
         } else {
             Toast.makeText(this, "Failed to add medication", Toast.LENGTH_SHORT).show();
         }
     }
+
 }
